@@ -1,0 +1,5 @@
+{
+  "name": "DomiDelivery MVP",
+  "description": "A Dominican food delivery MVP connecting customers, merchants, and drivers via WhatsApp and a real-time open board.",
+  "requestFramePermissions": []
+}
