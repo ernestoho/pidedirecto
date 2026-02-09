@@ -1,0 +1,29 @@
+{
+  "name": "@pidedirecto/rider-app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@pidedirecto/api-client": "workspace:*",
+    "@pidedirecto/auth": "workspace:*",
+    "@pidedirecto/config": "workspace:*",
+    "@pidedirecto/ui": "workspace:*",
+    "@pidedirecto/utils": "workspace:*",
+    "next": "^14.2.5",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "typescript": "~5.8.2"
+  }
+}
