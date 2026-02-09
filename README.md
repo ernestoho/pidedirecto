@@ -1,20 +1,45 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# PideDirecto Multi-App Platform
 
-# Run and deploy your AI Studio app
+A multi-tenant, multi-vendor delivery platform built as a monorepo with five PWA experiences: Customer Web, Customer Mobile, Admin Dashboard, Restaurant Tablet/Staff, and Rider app.
 
-This contains everything you need to run your app locally.
+## Workspace Layout
 
-View your app in AI Studio: https://ai.studio/apps/drive/1V0bO1iz03SAwrb7HB5jaE_lxqfLtSqt2
+```
+apps/
+  customer-web/         # Customer PWA Web storefront (Next.js)
+  customer-mobile/      # Customer PWA Mobile (Next.js)
+  admin-dashboard/      # Admin Dashboard PWA (Next.js)
+  restaurant-tablet/    # Restaurant Tablet/Staff PWA (Next.js)
+  rider-app/            # Rider PWA (Next.js)
+packages/
+  ui/                   # Shared UI primitives
+  utils/                # Shared utilities
+  api-client/           # API client and typed SDKs
+  auth/                 # Auth helpers and RBAC utilities
+  config/               # Shared config helpers
+services/
+  api/                  # Backend API service (NestJS/Express)
+  worker/               # Background worker service
+```
 
-## Run Locally
+## Getting Started
 
-**Prerequisites:**  Node.js
+This repo is designed for pnpm + Turborepo.
 
+```bash
+pnpm install
+pnpm dev
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Each app has its own `dev` script and can be run independently:
+
+```bash
+pnpm --filter @pidedirecto/customer-web dev
+```
+
+## Docs
+
+- `docs/app-routes.md` for initial route mapping
+- `docs/database-schema.md` for the proposed PostgreSQL schema
+- `docs/build-checklist.md` for the delivery plan checklist
+- `docs/monorepo-structure.md` for repo layout details

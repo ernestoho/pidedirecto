@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@pidedirecto/ui": ["../../packages/ui/src"],
+      "@pidedirecto/utils": ["../../packages/utils/src"],
+      "@pidedirecto/auth": ["../../packages/auth/src"],
+      "@pidedirecto/config": ["../../packages/config/src"],
+      "@pidedirecto/api-client": ["../../packages/api-client/src"]
+    }
+  },
+  "include": ["next-env.d.ts", "app", "types"],
+  "exclude": ["node_modules"]
+}
